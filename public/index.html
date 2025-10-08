@@ -498,16 +498,12 @@
             ideasModal.classList.remove('hidden');
             ideasModal.classList.add('flex');
 
-            const systemPrompt = "Eres un experto en marketing para clínicas dentales en Latinoamérica. Tu tarea es generar 3 ideas de campañas de marketing creativas y concisas que puedan ser ejecutadas por un agente de voz de IA llamado Vocalis AI. Las campañas deben ser para llamadas salientes. Cada idea debe tener un título en negrita (usando asteriscos, ej. **Título de Campaña**) y una breve descripción. No uses ningún otro formato. No incluyas introducciones ni conclusiones.";
-            const userQuery = Genera 3 ideas de campaña para una clínica llamada "${clinicName}" que se especializa en "${clinicSpecialty || 'odontología general'}".;
-            const apiKey = ""; // Canvas provides the key
-            const apiUrl = https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey};
+            // Call backend API instead of directly calling Gemini
+            const apiUrl = 'https://vocalis-ai-backend.onrender.com/api/generate-campaign-ideas';
 
             const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
+                clinic_name: clinicName,
+                clinic_specialty: clinicSpecialty || 'odontología general'
             };
 
             try {
@@ -522,16 +518,13 @@
                 }
 
                 const result = await response.json();
-                const candidate = result.candidates?.[0];
 
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    let generatedText = candidate.content.parts[0].text;
-                    const ideas = generatedText.split('\n').filter(line => line.trim() !== '');
+                if (result.success && result.ideas && result.ideas.length > 0) {
                     let html = '<ul class="space-y-4 text-left">';
-                    ideas.forEach(idea => {
+                    result.ideas.forEach(idea => {
                         const formattedIdea = idea
                             .replace(/\*\*(.*?)\*\*/g, '<strong class="block text-teal-700 mb-1">$1</strong>');
-                        html += <li class="p-3 bg-white rounded-md border">${formattedIdea}</li>;
+                        html += `<li class="p-3 bg-white rounded-md border">${formattedIdea}</li>`;
                     });
                     html += '</ul>';
                     ideasContent.innerHTML = html;
@@ -540,7 +533,7 @@
                 }
 
             } catch (error) {
-                console.error("Error al llamar a la API de Gemini:", error);
+                console.error("Error al llamar a la API:", error);
                 ideasContent.innerHTML = '<p class="text-center text-red-500">Hubo un error al generar las ideas. Por favor, inténtalo de nuevo más tarde.</p>';
             } finally {
                 ideasLoader.classList.add('hidden');
