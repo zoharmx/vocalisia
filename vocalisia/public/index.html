@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocalis AI | Tu Recepcionista IA 24/7 para Clínicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: 
+#f8f9fa;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle, rgba(230, 247, 255, 0.8) 0%, rgba(248, 249, 250, 0) 60%);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .shadow-teal {
+             box-shadow: 0 0 40px -10px rgba(19, 141, 117, 0.5);
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                <h1 class="text-2xl font-bold text-gray-800">Vocalis AI</h1>
+            </div>
+            <a href="#pricing" class="cta-button hidden md:inline-block bg-teal-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-teal-700">
+                Agendar Demo
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 text-center relative overflow-hidden">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-4">
+                    Tu Recepcionista Perfecta Trabaja <span class="text-teal-600">24/7</span>.
+                    <br>Sin Descansos, Sin Errores.
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Libera a tu personal, captura cada oportunidad y ofrece una atención excepcional a tus pacientes con la inteligencia artificial de voz más avanzada para clínicas.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#pricing" class="cta-button bg-teal-600 text-white font-bold px-8 py-4 rounded-lg text-lg shadow-lg hover:bg-teal-700 w-full md:w-auto">
+                        Agendar una Demo Personalizada
+                    </a>
+                    <button id="play-demo-btn" class="cta-button bg-white text-teal-600 font-bold px-8 py-4 rounded-lg text-lg shadow-lg border border-gray-200 hover:bg-gray-50 w-full md:w-auto flex items-center justify-center space-x-2">
+                        <i data-lucide="phone-call"></i>
+                        <span>Prueba a Vocalis AI ahora</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem / Solution Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold">¿Tu línea telefónica es un cuello de botella?</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Cada llamada perdida es un paciente que se va con la competencia. Cada minuto administrativo es un minuto menos de atención de calidad.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <div class="bg-red-100 text-red-600 rounded-full p-3 inline-block mb-4">
+                            <i data-lucide="phone-off"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Llamadas Perdidas = Pacientes Perdidos</h4>
+                        <p class="text-gray-600">Vocalis AI contesta al instante, 24/7. Nunca más perderás un nuevo paciente por tener las líneas ocupadas o estar fuera de horario.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-8 rounded-xl">
+                        <div class="bg-yellow-100 text-yellow-600 rounded-full p-3 inline-block mb-4">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Personal Sobrecargado</h4>
+                        <p class="text-gray-600">Automatiza el 80% de las tareas telefónicas repetitivas y permite que tu equipo se enfoque en lo que realmente importa: la atención en la clínica.</p>
+                    </div>
+                    <div class="bg-blue-50 p-8 rounded-xl">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+                            <i data-lucide="frown"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Experiencia Inconsistente</h4>
+                        <p class="text-gray-600">Ofrece una atención profesional y estandarizada en cada llamada, sin importar el día, la hora o el humor. La primera impresión de tu clínica será siempre perfecta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold">Magia Tecnológica, Resultados Reales.</h3>
+                    <p class="text-gray-600 mt-2">En solo tres pasos, Vocalis AI transforma tu atención telefónica.</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200"></div>
+                    <div class="grid md:grid-cols-3 gap-12 relative">
+                        <div class="text-center z-10">
+                            <div class="bg-white border-2 border-teal-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <span class="text-2xl font-bold text-teal-600">1</span>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-2">Recibe y Entiende</h4>
+                            <p class="text-gray-600">Vocalis AI contesta, saluda cordialmente y utiliza procesamiento de lenguaje natural para comprender la necesidad del paciente con una precisión asombrosa.</p>
+                        </div>
+                        <div class="text-center z-10">
+                            <div class="bg-white border-2 border-teal-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <span class="text-2xl font-bold text-teal-600">2</span>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-2">Procesa y Sincroniza</h4>
+                            <p class="text-gray-600">Se conecta de forma segura a tu calendario y CRM para consultar horarios, agendar citas o resolver dudas, todo en tiempo real.</p>
+                        </div>
+                        <div class="text-center z-10">
+                            <div class="bg-white border-2 border-teal-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <span class="text-2xl font-bold text-teal-600">3</span>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-2">Confirma y Registra</h4>
+                            <p class="text-gray-600">La cita queda agendada, el paciente recibe una confirmación por SMS y todo se registra en tu sistema. Cero trabajo manual para tu equipo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator Section -->
+        <section class="py-20 bg-teal-700 text-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold">Deja de Gastar. Empieza a Invertir.</h3>
+                    <p class="text-teal-200 mt-2 max-w-3xl mx-auto">Descubre cuánto podrías ahorrar y ganar. Ajusta los valores para simular el impacto en tu clínica.</p>
+                </div>
+                <div class="bg-teal-800/50 p-8 rounded-2xl max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="mb-6">
+                            <label for="salario" class="block font-semibold mb-2">Salario mensual de recepcionista (MXN)</label>
+                            <input id="salario" type="range" min="6000" max="25000" value="12000" step="1000" class="w-full h-2 bg-teal-600 rounded-lg appearance-none cursor-pointer">
+                            <div class="text-center text-lg font-bold mt-2" id="salario-val">$12,000 MXN</div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="llamadas" class="block font-semibold mb-2">Llamadas importantes perdidas al día</label>
+                            <input id="llamadas" type="range" min="1" max="20" value="5" step="1" class="w-full h-2 bg-teal-600 rounded-lg appearance-none cursor-pointer">
+                            <div class="text-center text-lg font-bold mt-2" id="llamadas-val">5 llamadas</div>
+                        </div>
+                         <div class="mb-6">
+                            <label for="valor" class="block font-semibold mb-2">Valor promedio de un nuevo paciente (MXN)</label>
+                            <input id="valor" type="range" min="500" max="5000" value="1500" step="100" class="w-full h-2 bg-teal-600 rounded-lg appearance-none cursor-pointer">
+                            <div class="text-center text-lg font-bold mt-2" id="valor-val">$1,500 MXN</div>
+                        </div>
+                    </div>
+                    <div class="bg-white text-gray-800 p-8 rounded-xl text-center">
+                        <h4 class="text-xl font-bold mb-4">Impacto Mensual Estimado</h4>
+                        <div>
+                            <p class="text-gray-500">Ahorro en costos operativos</p>
+                            <p class="text-3xl font-black text-green-600 mb-4" id="ahorro-total">$6,600 MXN</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-500">Ingresos adicionales recuperados</p>
+                            <p class="text-3xl font-black text-teal-600" id="ingreso-total">$165,000 MXN</p>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-6">*Cálculo basado en un costo de $300 USD para Vocalis AI y 22 días hábiles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold">Un Plan para Cada Etapa de tu Crecimiento</h3>
+                    <p class="text-gray-600 mt-2">Soluciones transparentes y escalables. Sin costos ocultos.</p>
+                    <div class="mt-4 bg-blue-50 text-blue-800 p-4 rounded-lg inline-block">
+                        <p class="font-semibold">Todos los planes requieren una única tarifa de implementación y configuración de $600 USD.</p>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+                    <!-- Básico -->
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-md border flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-center">Básico</h4>
+                            <p class="text-gray-500 text-center mt-2 h-12">Ideal para clínicas que inician su automatización.</p>
+                            <p class="text-5xl font-black text-center my-6">$300 <span class="text-lg font-semibold text-gray-500">USD/mes</span></p>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> 250 minutos incluidos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Agendamiento de citas</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Recordatorios automáticos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Conexión a 1 CRM y Google Calendar</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Transferencia a especialista humano</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 text-center mt-6">Minuto adicional: <span class="font-bold">$0.30 USD</span></p>
+                            <button class="w-full mt-4 bg-white border border-teal-600 text-teal-600 font-bold py-3 rounded-lg hover:bg-teal-50">Elegir Plan</button>
+                        </div>
+                    </div>
+
+                    <!-- Profesional -->
+                    <div class="pricing-card bg-teal-600 text-white p-8 rounded-xl shadow-teal relative overflow-hidden flex flex-col h-full">
+                         <div class="flex-grow">
+                            <span class="absolute top-0 right-0 bg-yellow-300 text-teal-800 text-xs font-bold px-3 py-1 rounded-bl-lg">MÁS POPULAR</span>
+                            <h4 class="text-2xl font-bold text-center">Profesional</h4>
+                            <p class="text-teal-200 text-center mt-2 h-12">Para clínicas que buscan crecer y optimizar.</p>
+                            <p class="text-5xl font-black text-center my-6">$450 <span class="text-lg font-semibold text-teal-100">USD/mes</span></p>
+                            <ul class="space-y-4 text-teal-50">
+                                <li class="flex items-center"><i data-lucide="check" class="text-yellow-300 mr-2"></i> 600 minutos incluidos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-yellow-300 mr-2"></i> Todo lo del plan Básico</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-yellow-300 mr-2"></i> **Transcripción de llamadas**</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-yellow-300 mr-2"></i> Campañas de marketing salientes</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-yellow-300 mr-2"></i> Panel de analíticas avanzadas</li>
+                            </ul>
+
+                            <!-- Gemini Feature -->
+                            <div class="mt-6 bg-teal-700/50 p-4 rounded-lg text-left">
+                                <p class="text-sm font-semibold text-white mb-2">¡Pruébalo ahora!</p>
+                                <p class="text-xs text-teal-200 mb-3">Descubre el poder creativo de la IA para hacer crecer tu clínica.</p>
+                                <input id="clinic-name" type="text" placeholder="Nombre de tu clínica" class="w-full text-sm p-2 rounded border bg-teal-50 text-gray-800 placeholder-gray-500 mb-2">
+                                <input id="clinic-specialty" type="text" placeholder="Especialidad (ej. Ortodoncia)" class="w-full text-sm p-2 rounded border bg-teal-50 text-gray-800 placeholder-gray-500 mb-2">
+                                <button id="generate-ideas-btn" class="w-full bg-yellow-300 text-teal-800 font-bold py-2 rounded-lg text-sm hover:bg-yellow-400 flex items-center justify-center space-x-2 transition-all">
+                                    <span>✨ Generar Ideas de Campaña</span>
+                                    <div id="ideas-loader" class="hidden w-4 h-4 border-2 border-teal-800 border-t-transparent rounded-full animate-spin"></div>
+                                </button>
+                            </div>
+                         </div>
+                         <div>
+                             <p class="text-sm text-teal-200 text-center mt-6">Minuto adicional: <span class="font-bold">$0.24 USD</span></p>
+                             <button class="w-full mt-4 bg-white text-teal-600 font-bold py-3 rounded-lg hover:bg-gray-100">Elegir Plan</button>
+                         </div>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-md border flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h4 class="text-2xl font-bold text-center">Premium</h4>
+                            <p class="text-gray-500 text-center mt-2 h-12">Para grupos y clínicas que requieren personalización total.</p>
+                            <p class="text-5xl font-black text-center my-6">$700+ <span class="text-lg font-semibold text-gray-500">USD/mes</span></p>
+                            <ul class="space-y-4 text-gray-700">
+                                 <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> 1,500+ minutos incluidos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Todo lo del plan Profesional</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> **Grabaciones de llamadas**</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Clonación de voz de marca</li>
+                                <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-2"></i> Soporte prioritario</li>
+                            </ul>
+                        </div>
+                        <div>
+                             <p class="text-sm text-gray-500 text-center mt-6">Minuto adicional: <span class="font-bold">$0.19 USD</span></p>
+                             <button class="w-full mt-4 bg-white border border-teal-600 text-teal-600 font-bold py-3 rounded-lg hover:bg-teal-50">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center bg-gray-50 p-6 rounded-lg max-w-4xl mx-auto">
+                    <h4 class="text-xl font-bold mb-4">Potencia tu Plan con Servicios Adicionales</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-left">
+                        <div class="bg-white p-4 rounded-md border">
+                            <p class="font-semibold text-gray-800">Paquete de Transcripción y Grabación</p>
+                            <p class="text-gray-600 text-sm">Disponible para el Plan Básico. Ten un registro completo de cada interacción.</p>
+                            <p class="text-lg font-bold text-teal-600 mt-2">+$75 USD/mes</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md border">
+                            <p class="font-semibold text-gray-800">Grabación de Llamadas</p>
+                            <p class="text-gray-600 text-sm">Disponible para el Plan Profesional. Complementa tus transcripciones con el audio original.</p>
+                            <p class="text-lg font-bold text-teal-600 mt-2">+$30 USD/mes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-20 text-center">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+                    ¿Listo para llevar tu clínica al <span class="text-teal-600">siguiente nivel</span>?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Deja que Vocalis AI se encargue de la telefonía para que tú te encargues de las sonrisas. Agenda una demo gratuita y sin compromiso hoy mismo.
+                </p>
+                <a href="#pricing" class="cta-button bg-teal-600 text-white font-bold px-10 py-5 rounded-lg text-xl shadow-lg hover:bg-teal-700">
+                    Obtener mi Demo Gratuita
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Vocalis AI. Todos los derechos reservados.</p>
+            <p class="text-gray-400 mt-2">Revolucionando la comunicación en el sector salud.</p>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md relative p-6 text-center">
+             <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="mb-4">
+                <div class="bg-teal-100 text-teal-600 rounded-full p-3 inline-block">
+                    <i data-lucide="phone-incoming"></i>
+                </div>
+                <h3 class="text-2xl font-bold mt-2">Llamada de Demostración</h3>
+                <p class="text-gray-500">Estás hablando con Vocalis AI.</p>
+                <div id="ai-status" class="mt-4 h-16 flex items-center justify-center p-3 bg-gray-100 rounded-lg">
+                    <p class="text-gray-700 font-medium">...</p>
+                </div>
+            </div>
+            <div class="space-y-3">
+                 <p class="font-semibold">¿Qué te gustaría hacer?</p>
+                 <button class="w-full bg-teal-600 text-white font-semibold py-3 rounded-lg hover:bg-teal-700 demo-option" data-response="agendar">Agendar una cita de limpieza</button>
+                 <button class="w-full bg-gray-200 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-300 demo-option" data-response="horario">Preguntar por el horario</button>
+            </div>
+            <p class="text-xs text-gray-400 mt-6">Esta es una simulación interactiva para demostrar la calidad de la voz.</p>
+        </div>
+    </div>
+
+    <!-- AI Ideas Modal -->
+    <div id="ideas-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg relative p-6">
+             <button id="close-ideas-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="mb-4 text-center">
+                <div class="bg-teal-100 text-teal-600 rounded-full p-3 inline-block">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <h3 class="text-2xl font-bold mt-2">Ideas de Campaña generadas por IA</h3>
+                <p id="ideas-modal-subtitle" class="text-gray-500">Para "Clínica Dental Sonrisa Feliz"</p>
+            </div>
+            <div id="ideas-content" class="mt-4 h-64 p-3 bg-gray-50 rounded-lg overflow-y-auto">
+                <!-- Content will be injected here by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ROI Calculator Logic
+        const salarioSlider = document.getElementById('salario');
+        const llamadasSlider = document.getElementById('llamadas');
+        const valorSlider = document.getElementById('valor');
+
+        const salarioVal = document.getElementById('salario-val');
+        const llamadasVal = document.getElementById('llamadas-val');
+        const valorVal = document.getElementById('valor-val');
+
+        const ahorroTotal = document.getElementById('ahorro-total');
+        const ingresoTotal = document.getElementById('ingreso-total');
+
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', minimumFractionDigits: 0 }).format(value);
+        }
+
+        function calculateROI() {
+            const salario = parseInt(salarioSlider.value);
+            const llamadas = parseInt(llamadasSlider.value);
+            const valor = parseInt(valorSlider.value);
+
+            // Assuming an exchange rate of 18 MXN per USD for calculation
+            const costoVocalis = 300 * 18; 
+
+            salarioVal.textContent = formatCurrency(salario);
+            llamadasVal.textContent = `${llamadas} llamadas`;
+            valorVal.textContent = formatCurrency(valor);
+
+            const ahorro = salario - costoVocalis;
+            ahorroTotal.textContent = formatCurrency(ahorro > 0 ? ahorro : 0);
+
+            // Assuming 75% of missed calls are new patients and 22 working days
+            const ingresoRecuperado = llamadas * 0.75 * valor * 22;
+            ingresoTotal.textContent = formatCurrency(ingresoRecuperado);
+        }
+
+        salarioSlider.addEventListener('input', calculateROI);
+        llamadasSlider.addEventListener('input', calculateROI);
+        valorSlider.addEventListener('input', calculateROI);
+
+        // Initial Calculation
+        calculateROI();
+
+        // Demo Modal Logic
+        const demoModal = document.getElementById('demo-modal');
+        const playDemoBtn = document.getElementById('play-demo-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const demoOptions = document.querySelectorAll('.demo-option');
+        const aiStatus = document.getElementById('ai-status').querySelector('p');
+
+        let currentAudio = null;
+
+        const responses = {
+            'intro': 'https://storage.googleapis.com/voice-demos-bucket/vocalis_intro.mp3',
+            'agendar': 'https://storage.googleapis.com/voice-demos-bucket/vocalis_agendar.mp3',
+            'horario': 'https://storage.googleapis.com/voice-demos-bucket/vocalis_horario.mp3'
+        };
+
+        function playResponse(key) {
+             if(currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            const audioUrl = responses[key];
+            if (!audioUrl) return;
+
+            currentAudio = new Audio(audioUrl);
+            aiStatus.textContent = 'Hablando...';
+            currentAudio.play();
+            currentAudio.onended = () => {
+                 aiStatus.textContent = 'Esperando tu respuesta...';
+            };
+        }
+
+        playDemoBtn.addEventListener('click', () => {
+            demoModal.classList.remove('hidden');
+            demoModal.classList.add('flex');
+            aiStatus.textContent = 'Conectando...';
+            setTimeout(() => {
+                playResponse('intro');
+            }, 1000);
+        });
+
+        function closeModal() {
+            demoModal.classList.add('hidden');
+            demoModal.classList.remove('flex');
+            if(currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        demoModal.addEventListener('click', (e) => {
+            if (e.target === demoModal) {
+                closeModal();
+            }
+        });
+
+        demoOptions.forEach(button => {
+            button.addEventListener('click', () => {
+                const responseKey = button.dataset.response;
+                aiStatus.textContent = 'Procesando...';
+                setTimeout(() => {
+                     playResponse(responseKey);
+                }, 500);
+            });
+        });
+
+        // AI Idea Generator Logic
+        const generateIdeasBtn = document.getElementById('generate-ideas-btn');
+        const ideasLoader = document.getElementById('ideas-loader');
+        const ideasModal = document.getElementById('ideas-modal');
+        const closeIdeasModalBtn = document.getElementById('close-ideas-modal-btn');
+        const ideasContent = document.getElementById('ideas-content');
+        const ideasModalSubtitle = document.getElementById('ideas-modal-subtitle');
+        const clinicNameInput = document.getElementById('clinic-name');
+        const clinicSpecialtyInput = document.getElementById('clinic-specialty');
+
+        generateIdeasBtn.addEventListener('click', async () => {
+            const clinicName = clinicNameInput.value.trim();
+            const clinicSpecialty = clinicSpecialtyInput.value.trim();
+
+            if (!clinicName) {
+                // Reemplazamos alert() con un popup visual
+                clinicNameInput.style.borderColor = 'red';
+                clinicNameInput.placeholder = '¡El nombre es obligatorio!';
+                setTimeout(() => {
+                    clinicNameInput.style.borderColor = '';
+                    clinicNameInput.placeholder = 'Nombre de tu clínica';
+                }, 3000);
+                return;
+            }
+
+            ideasLoader.classList.remove('hidden');
+            generateIdeasBtn.disabled = true;
+
+            ideasModalSubtitle.textContent = `Para "${clinicName}"`;
+            ideasContent.innerHTML = '<p class="text-center text-gray-500 animate-pulse">✨ Generando ideas creativas con Gemini...</p>';
+            ideasModal.classList.remove('hidden');
+            ideasModal.classList.add('flex');
+
+            // --- URL CORREGIDA ---
+            // Apunta a tu servicio en Render.
+            const apiUrl = 'https://vocalisia.onrender.com/api/generate-campaign-ideas';
+
+            const payload = {
+                clinic_name: clinicName,
+                clinic_specialty: clinicSpecialty || 'odontología general'
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || `Error de la API: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+
+                if (result.success && result.ideas && result.ideas.length > 0) {
+                    let html = '<ul class="space-y-4 text-left">';
+                    result.ideas.forEach(idea => {
+                        const formattedIdea = idea
+                            .replace(/\*\*(.*?)\*\*/g, '<strong class="block text-teal-700 mb-1">$1</strong>');
+                        html += `<li class="p-3 bg-white rounded-md border">${formattedIdea}</li>`;
+                    });
+                    html += '</ul>';
+                    ideasContent.innerHTML = html;
+                } else {
+                     throw new Error(result.message || "La respuesta de la API no tuvo el formato esperado.");
+                }
+
+            } catch (error) {
+                console.error("Error al llamar a la API:", error);
+                ideasContent.innerHTML = `<p class="text-center text-red-500">Hubo un error al generar las ideas. Por favor, inténtalo de nuevo más tarde. <br><small class="text-gray-500">${error.message}</small></p>`;
+            } finally {
+                ideasLoader.classList.add('hidden');
+                generateIdeasBtn.disabled = false;
+            }
+        });
+
+        function closeIdeasModal() {
+            ideasModal.classList.add('hidden');
+            ideasModal.classList.remove('flex');
+        }
+
+        closeIdeasModalBtn.addEventListener('click', closeIdeasModal);
+        ideasModal.addEventListener('click', (e) => {
+            if (e.target === ideasModal) {
+                closeIdeasModal();
+            }
+        });
+
+    </script>
+</body>
+</html>
