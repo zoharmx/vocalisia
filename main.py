@@ -38,6 +38,7 @@ class CampaignRequest(BaseModel):
 
 # Modelo de datos para la respuesta que se envía al frontend
 class CampaignResponse(BaseModel):
+    success: bool
     ideas: list[str]
     clinic_name: str
 
@@ -105,8 +106,8 @@ async def generate_campaign_ideas(request: CampaignRequest):
                 raise HTTPException(status_code=500, detail="La API de Gemini no devolvió contenido.")
             
             ideas = [line.strip() for line in generated_text.split('\n') if line.strip()]
-            
-            return CampaignResponse(ideas=ideas, clinic_name=request.clinic_name)
+
+            return CampaignResponse(success=True, ideas=ideas, clinic_name=request.clinic_name)
             
     except httpx.HTTPStatusError as e:
         error_details = e.response.json().get('error', {}).get('message', e.response.text)
