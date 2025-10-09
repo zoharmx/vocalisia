@@ -6,6 +6,7 @@ from typing import Optional
 import httpx
 import os
 from dotenv import load_dotenv
+from prompts import SYSTEM_PROMPT
 
 # Cargar variables de entorno desde .env (para desarrollo local)
 load_dotenv()
@@ -67,13 +68,6 @@ async def generate_campaign_ideas(request: CampaignRequest):
             detail="Error de configuración del servidor: La clave de API de Gemini no está definida."
         )
     
-    system_prompt = """Eres un experto en marketing para clínicas dentales en Latinoamérica. 
-    Tu tarea es generar 3 ideas de campañas de marketing creativas y concisas que puedan ser 
-    ejecutadas por un agente de voz de IA llamado Vocalis AI. Las campañas deben ser para 
-    llamadas salientes. Cada idea debe tener un título en negrita (usando asteriscos, 
-    ej. **Título de Campaña**) y una breve descripción de 2-3 líneas. No uses ningún otro 
-    formato. No incluyas introducciones ni conclusiones."""
-    
     user_query = f"""Genera 3 ideas de campaña para una clínica llamada "{request.clinic_name}" 
     que se especializa en "{request.clinic_specialty}"."""
     
@@ -83,7 +77,7 @@ async def generate_campaign_ideas(request: CampaignRequest):
     
     payload = {
         "contents": [{"parts": [{"text": user_query}]}],
-        "systemInstruction": {"parts": [{"text": system_prompt}]},
+        "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "generationConfig": {
             "temperature": 0.9,
             "topK": 40,
